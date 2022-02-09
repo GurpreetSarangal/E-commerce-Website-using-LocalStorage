@@ -1,0 +1,70 @@
+.temp_color{
+    color: azure;
+}
+#logopic{
+    max-width:min-content;
+    border-radius: 48%;
+}
+
+
+#logo{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    color:aliceblue ;
+}
+
+#logolink{
+    
+    display: flex;
+    
+    justify-content: center;
+}
+
+#categories-buttons li a{
+    color: aliceblue;
+}
+
+#nav-dir{
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-buttons {
+    /* margin-left: 50%; */
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 50%;
+    font-size:larger;
+}
+
+#user-buttons li a{
+    color:aliceblue;
+}
+#navbarSupportedContent {
+    justify-content: center;
+    margin-top: 1rem;
+}
+#buttons-container{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.2rem;
+}
+#avatar{
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 50%;
+}
+#rack{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(209, 216, 253);
+    padding: 2rem;
+}
+.item-pic{
+    border-radius: 10%;
+}
+.rack-item{
+    margin: 1rem 2rem;
+}
