@@ -35,7 +35,7 @@ if(products===null){
         }
     ];
     stringified_products = JSON.stringify(products);
-    localStorage.setItem("product", stringified_products);
+    localStorage.setItem("products", stringified_products);
 }
 var j=0;
 for(var i=0; i<products.length*5; i++){
@@ -50,7 +50,7 @@ for(var i=0; i<products.length*5; i++){
     var name = (products[j]).name;
     var price = (products[j]).price;
     // create html code
-    var html_code = '<div class="item-pic">  <img src="/logo'+String(j)+'.png" alt="Item-pic"></div><div class="item-name">  <span>'+String(name)+'</span></div><div class="item-price">  <span>Price: '+String(price)+'</span></div><div class="save-it"><input type="button" value="Save it" id="add-'+String(id)+'-to-cart" onclick="save('+String(id)+')"></div>';
+    var html_code = '<div class="item-pic">  <img src="/logo'+String(id)+'.png" alt="Item-pic"></div><div class="item-name">  <span>'+String(name)+'</span></div><div class="item-price">  <span>Price: '+String(price)+'</span></div><div class="save-it"><input type="button" value="Save it" id="add-'+String(id)+'-to-cart" onclick="save('+String(id)+')"></div>';
     // insert code in html item div
     document.getElementById(String(i)).innerHTML = html_code;
     j++;
@@ -97,6 +97,7 @@ function save(id){
         user.cart.push(item);
     }
     localStorage.setItem(logged_user,JSON.stringify(user));
+    
     return 0;
 
 }

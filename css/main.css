@@ -50,11 +50,14 @@
     justify-content: flex-start;
     margin-top: 1.2rem;
 }
+
 #avatar{
     max-width: 60px;
     max-height: 60px;
     border-radius: 50%;
 }
+
+
 #rack{
     display:flex;
     flex-wrap: wrap;
