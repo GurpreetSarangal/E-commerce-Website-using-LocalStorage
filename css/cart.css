@@ -1,3 +1,7 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
 .temp_color{
     color: azure;
 }
@@ -55,11 +59,14 @@
     justify-content: center;
 }
 
-
-
-#to-cartlist{
-
+#navbarSupportedContent div input{
+    max-width:fit-content;
 }
+
+#user-buttons li a:hover{
+    cursor: default;
+}
+
 #avatar{
     max-width: 60px;
     max-height: 60px;
@@ -76,13 +83,20 @@
     color: white;
     text-decoration:none;
 }
+#heading{
+    background-color: rgb(209, 216, 253);
+    color: #212529;
+}
 
-#rack{
+#cart-list{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(209, 216, 253);
     padding: 2rem;
+}
+.remove-it input{
+    margin: 0rem 1rem;
 }
 .item-pic{
     border-radius: 10%;

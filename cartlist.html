@@ -38,20 +38,33 @@
             </ul>
           </div>
 
-          <div class="col-sm-2"></div>
+          <div class="col-sm-1"></div>
 
           <div class="collapse navbar-collapse container-fluid col-sm-2"  id="navbarSupportedContent">
             <div>
                      <img src="avatar.jpg" alt="avatar" id="avatar">
             </div>
-            <div>
-                <!-- <a onclick="sign_out()" class="button" href="index.html">Sign-out</a> -->
-                <button class="button" value="sign-out" id="sign-out"></button>
+            <!-- <div>
+                <!-- <a onclick="sign_out()" class="button" href="index.html">Sign-out</a> --
+                <input class="button" value="sign-out" id="sign-out" onclick="sign_out()">
             </div>
             <div>
-                <!-- <a class="button" onclick="switch_user()" href="login.html">Switch User</a> -->
-                <button class="button" value="Switch User" id="switch-user"></button>
-            </div>
+                <!-- <a class="button" onclick="switch_user()" href="login.html">Switch User</a> --
+                <input class="button" value="Switch User" id="switch-user"
+                onclick="switch_user()">
+            </div> -->
+            <ul class="navbar-nav  mb-4 mb-lg-3" id="user-buttons">
+              <li class="nav-item"> 
+                <a class="nav-link  active" aria-current="page" onclick="sign_out()">
+                  SignOut
+                </a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" onclick="switch_user()">
+                  SwitchUser
+                </a>
+              </li>
+            </ul>
             
           </div>
 
@@ -59,15 +72,19 @@
 
         
       </nav>
+      
 
-
-      <div class="container" id="rack">
-          
+      <div class="container" id="cart-list">
+        <div class="container text-center" id="heading">
+          <h2>Your Cart</h2>
+        </div>
 
           
       </div>
 
+      <div class="container" id="grand-total">
 
+      </div>
       
     
        <!-- JavaScript Bundle with Popper -->
