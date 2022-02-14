@@ -10,7 +10,7 @@ if(logged_user == null){
 else{
     // if an user is logged in 
     // show an avatar and a link to cartlist.html
-    document.getElementById("navbarSupportedContent").innerHTML = '<div> <label for="to-cartlist"></label><a href="cartlist.html" id="to-cartlist"><img src="avatar.jpg" alt="avatar" id="avatar"></a></div>';
+    document.getElementById("navbarSupportedContent").innerHTML = '<div> <label for="to-cartlist"></label><a href="cartlist.html" id="to-cartlist"><img src="/Pictures/avatar.jpg" alt="avatar" id="avatar"></a></div>';
 }  
 
 
@@ -32,13 +32,23 @@ if(products===null){
             id: 203,
             name: "Rolex Watch",
             price: 2000,
-        }
+        },
+        {
+            id: 204,
+            name: "American Tourister Bag",
+            price: 3000,
+        },
+        {
+            id: 205,
+            name: "WildCraft Bag",
+            price: 1800,
+        },
     ];
     stringified_products = JSON.stringify(products);
     localStorage.setItem("products", stringified_products);
 }
 var j=0;
-for(var i=0; i<products.length*5; i++){
+for(var i=0; i<products.length; i++){
     // get inner code on rack
     inner = document.getElementById("rack").innerHTML ;
     // add new rack-item div
@@ -50,7 +60,7 @@ for(var i=0; i<products.length*5; i++){
     var name = (products[j]).name;
     var price = (products[j]).price;
     // create html code
-    var html_code = '<div class="item-pic">  <img src="/logo'+String(id)+'.png" alt="Item-pic"></div><div class="item-name">  <span>'+String(name)+'</span></div><div class="item-price">  <span>Price: '+String(price)+'</span></div><div class="save-it"><input type="button" value="Save it" id="add-'+String(id)+'-to-cart" onclick="save('+String(id)+')"></div>';
+    var html_code = '<div class="item-pic">  <img src="/Pictures/logo'+String(id)+'.png" alt="Item-pic"></div><div class="item-name">  <span>'+String(name)+'</span></div><div class="item-price">  <span>Price: '+String(price)+' &#36; </span></div><div class="save-it"><input type="button" value="Save it" id="add-'+String(id)+'-to-cart" onclick="save('+String(id)+')"></div>';
     // insert code in html item div
     document.getElementById(String(i)).innerHTML = html_code;
     j++;
@@ -97,7 +107,7 @@ function save(id){
         user.cart.push(item);
     }
     localStorage.setItem(logged_user,JSON.stringify(user));
-    
+
     return 0;
 
 }
