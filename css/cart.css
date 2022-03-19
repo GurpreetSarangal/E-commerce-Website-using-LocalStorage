@@ -88,13 +88,38 @@
     color: #212529;
 }
 
-#cart-list{
-    display:flex;
-    flex-wrap: wrap;
+#cart-list {
+    /* display:flex; */
+    /* flex-wrap: wrap; */
     justify-content: center;
     background-color: rgb(209, 216, 253);
     padding: 2rem;
 }
+#cart-list li{
+    margin: 1rem 7rem;
+}
+.remove{
+    justify-self: right;
+}
+#item-quantity{
+    max-width: 4rem;
+}
+
+.list-item{
+    display: flex;
+    background-color: aliceblue;
+    align-items: center;
+    marker: none;
+}
+.list-item div{
+    margin: 1px 2.8rem;
+}
+.list-item div img{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+
 .remove-it input{
     margin: 0rem 1rem;
 }
